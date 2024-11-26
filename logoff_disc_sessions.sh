@@ -7,8 +7,6 @@ if [ -z "$DISC_SESSIONS" ]; then
     exit 0
 fi
 
-STUCK_SESSIONS=$(mktemp)
-
 while read -r line; do
     SESSION=$(echo "$line" | awk '{print $2}')
 
